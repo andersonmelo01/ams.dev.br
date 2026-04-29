@@ -27,7 +27,6 @@ $config = include 'config.php';
     </script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
         function gtag() {
             dataLayer.push(arguments);
         }
@@ -35,11 +34,35 @@ $config = include 'config.php';
 
         gtag('config', 'G-Y5GYZ94XHE');
     </script>
+
     <!-- Google AdSense -->
     <script async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<?= $config['adsense_client_id'] ?>"
         crossorigin="anonymous">
     </script>
+
+    <!-- Facebook Pixel -->
+    <?php if (!empty($config['facebook_pixel_id'])): ?>
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '<?= $config['facebook_pixel_id'] ?>');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=<?= $config['facebook_pixel_id'] ?>&ev=PageView&noscript=1"/></noscript>
+    <?php endif; ?>
+
+    <!-- Facebook Ads (opcional) -->
+    <?php if (!empty($config['facebook_ads_id'])): ?>
+    <!-- Adicione aqui o script do Facebook Ads usando $config['facebook_ads_id'] se necessário -->
+    <?php endif; ?>
 
 
 </head>
@@ -64,6 +87,9 @@ $config = include 'config.php';
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#saas">Sistemas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#servicos">Serviços</a>
@@ -121,11 +147,11 @@ $config = include 'config.php';
             data-ad-slot="1234567890"
             data-ad-format="auto"
             data-full-width-responsive="true"></ins>
-    </div>-->
-
+    </div>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    </script>-->
+
     <!-- SOBRE -->
     <section id="sobre">
         <div class="container">
@@ -193,10 +219,14 @@ $config = include 'config.php';
                             <li>✔ Cardápio digital</li>
                             <li>✔ Pedido automático</li>
                             <li>✔ Gestão de entregas</li>
+                            <li>✔ Relatórios de vendas</li>
                         </ul>
 
                         <a href="#contato" class="btn btn-primary mt-3">
                             Quero esse sistema
+                        </a>
+                        <a href="landing/landing.php" class="btn btn-outline-success mt-2">
+                            Conhecer Produto
                         </a>
                     </div>
                 </div>
@@ -219,6 +249,9 @@ $config = include 'config.php';
                         <a href="#contato" class="btn btn-primary mt-3">
                             Quero esse sistema
                         </a>
+                        <a href="pdv.php" class="btn btn-outline-success mt-2">
+                            Conhecer Produto
+                        </a>
                     </div>
                 </div>
 
@@ -240,6 +273,83 @@ $config = include 'config.php';
                         <a href="#contato" class="btn btn-primary mt-3">
                             Quero esse sistema
                         </a>
+                        <a href="landing/crm.php" class="btn btn-outline-success mt-2">
+                            Conhecer Produto
+                        </a>
+                    </div>
+                </div>
+                <!-- CAFETERIAS E PADARIAS -->
+                <div class="col-md-4">
+                    <div class="card p-4 h-100">
+                        <h5 class="fw-bold">Sistema para Cafeterias e Padarias</h5>
+                        <p class="text-muted">Gestão de pedidos, controle de estoque, comandas eletrônicas e integração com delivery.</p>
+                        <ul>
+                            <li>✔ Controle de mesas</li>
+                            <li>✔ Estoque de insumos</li>
+                            <li>✔ Relatórios de vendas</li>
+                        </ul>
+                        <a href="#contato" class="btn btn-primary mt-3">Quero esse sistema</a>
+                        <a href="landing/coffeehand.php" class="btn btn-outline-success mt-2">Conhecer Produto</a>
+                    </div>
+                </div>
+
+                <!-- AÇAITERIA E SORVETERIAS -->
+                <div class="col-md-4">
+                    <div class="card p-4 h-100">
+                        <h5 class="fw-bold">Sistema para Açaiteria e Sorveterias</h5>
+                        <p class="text-muted">Monte seu produto, controle de sabores, adicionais, estoque e vendas.</p>
+                        <ul>
+                            <li>✔ Montagem personalizada</li>
+                            <li>✔ Controle de estoque</li>
+                            <li>✔ Relatórios detalhados</li>
+                        </ul>
+                        <a href="#contato" class="btn btn-primary mt-3">Quero esse sistema</a>
+                        <a href="landing/acaiteria.php" class="btn btn-outline-success mt-2">Conhecer Produto</a>
+                    </div>
+                </div>
+
+                <!-- MATERIAL DE CONSTRUÇÃO -->
+                <div class="col-md-4">
+                    <div class="card p-4 h-100">
+                        <h5 class="fw-bold">Sistema para Loja de Material de Construção</h5>
+                        <p class="text-muted">Gestão de estoque, vendas, orçamentos, clientes e fornecedores para construção civil.</p>
+                        <ul>
+                            <li>✔ Controle de estoque</li>
+                            <li>✔ Emissão de orçamentos</li>
+                            <li>✔ Cadastro de clientes e fornecedores</li>
+                        </ul>
+                        <a href="#contato" class="btn btn-primary mt-3">Quero esse sistema</a>
+                        <a href="landing.php" class="btn btn-outline-success mt-2">Conhecer Produto</a>
+                    </div>
+                </div>
+
+                <!-- GESTÃO CONDOMINIAL -->
+                <div class="col-md-4">
+                    <div class="card p-4 h-100">
+                        <h5 class="fw-bold">Sistema para Gestão Condominial</h5>
+                        <p class="text-muted">Administração de condomínios, controle de taxas, comunicados, reservas e assembleias online.</p>
+                        <ul>
+                            <li>✔ Gestão de moradores</li>
+                            <li>✔ Emissão de boletos</li>
+                            <li>✔ Reservas de áreas comuns</li>
+                        </ul>
+                        <a href="#contato" class="btn btn-primary mt-3">Quero esse sistema</a>
+                        <a href="landing/condominio.php" class="btn btn-outline-success mt-2">Conhecer Produto</a>
+                    </div>
+                </div>
+
+                <!-- AGENDAMENTO ONLINE -->
+                <div class="col-md-4">
+                    <div class="card p-4 h-100">
+                        <h5 class="fw-bold">Sistema de Agendamento On-line</h5>
+                        <p class="text-muted">Agendamento de serviços, consultas ou reservas para qualquer nicho de negócio.</p>
+                        <ul>
+                            <li>✔ Agenda online</li>
+                            <li>✔ Notificações automáticas</li>
+                            <li>✔ Gestão de horários e profissionais</li>
+                        </ul>
+                        <a href="#contato" class="btn btn-primary mt-3">Quero esse sistema</a>
+                        <a href="landing.php" class="btn btn-outline-success mt-2">Conhecer Produto</a>
                     </div>
                 </div>
 

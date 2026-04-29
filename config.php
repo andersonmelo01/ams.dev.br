@@ -134,7 +134,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save'])) {
         'ga4_id' => trim($_POST['ga4_id'] ?? ''),
         'google_ads_id' => trim($_POST['google_ads_id'] ?? ''),
         'gtag_conversion_label' => trim($_POST['gtag_conversion_label'] ?? ''),
-        'adsense_client_id' => trim($_POST['adsense_client_id'] ?? '')
+        'adsense_client_id' => trim($_POST['adsense_client_id'] ?? ''),
+        'facebook_pixel_id' => trim($_POST['facebook_pixel_id'] ?? ''),
+        'facebook_ads_id' => trim($_POST['facebook_ads_id'] ?? ''),
     ];
 
     saveConfigData($dataFile, $newData);
@@ -211,6 +213,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save'])) {
             <input type="text" name="adsense_client_id" class="form-control mb-4"
                 placeholder="Ex: ca-pub-xxxxxxxxxxxx"
                 value="<?= htmlspecialchars($configData['adsense_client_id']) ?>">
+
+            <h5 class="mb-3">Facebook Pixel</h5>
+            <input type="text" name="facebook_pixel_id" class="form-control mb-3"
+                placeholder="Ex: 123456789012345"
+                value="<?= htmlspecialchars($configData['facebook_pixel_id'] ?? '') ?>">
+
+            <h5 class="mb-3">Facebook Ads</h5>
+            <input type="text" name="facebook_ads_id" class="form-control mb-4"
+                placeholder="ID do Facebook Ads (opcional)"
+                value="<?= htmlspecialchars($configData['facebook_ads_id'] ?? '') ?>">
 
             <button type="submit" class="btn btn-primary w-100 fw-bold">
                 💾 Salvar Configurações
