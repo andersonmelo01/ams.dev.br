@@ -579,7 +579,7 @@ $config = include 'config.php';
         </ul>
         <div class="card-actions">
           <a href="#contato" class="btn-card btn-card-primary">Quero esse sistema</a>
-          <a href="pdv.php" class="btn-card btn-card-outline">Ver produto</a>
+          <a href="landing/pdv.php" class="btn-card btn-card-outline">Ver produto</a>
         </div>
       </div>
 

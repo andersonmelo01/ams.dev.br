@@ -787,7 +787,7 @@
   <div class="plans-grid">
     <div class="plan reveal d1">
       <div class="plan-tier">Básico</div>
-      <div class="plan-price">R$ 149<sub>/mês</sub></div>
+      <div class="plan-price">Sob<sub>Consulta</sub></div>
       <div class="plan-desc">Ideal para quiosques e cafés pequenos</div>
       <div class="plan-hr"></div>
       <ul class="plan-feats">
@@ -802,7 +802,7 @@
     <div class="plan hot reveal d2">
       <div class="hot-badge">☕ MAIS PEDIDO</div>
       <div class="plan-tier">Profissional</div>
-      <div class="plan-price">R$ 299<sub>/mês</sub></div>
+      <div class="plan-price">Sob<sub>Consulta</sub></div>
       <div class="plan-desc">Para cafeterias e padarias em crescimento</div>
       <div class="plan-hr"></div>
       <ul class="plan-feats">

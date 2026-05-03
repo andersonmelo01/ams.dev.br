@@ -743,7 +743,7 @@
   <div class="pricing-grid">
     <div class="plan reveal reveal-delay-1">
       <div class="plan-name">Starter</div>
-      <div class="plan-price">R$ 199<span>/mês</span></div>
+      <div class="plan-price">Sob<span>Consulta</span></div>
       <div class="plan-sub">Até 50 unidades</div>
       <div class="plan-divider"></div>
       <ul class="plan-features">
@@ -759,7 +759,7 @@
     <div class="plan featured reveal reveal-delay-2">
       <div class="popular-badge">🔥 MAIS POPULAR</div>
       <div class="plan-name">Profissional</div>
-      <div class="plan-price">R$ 399<span>/mês</span></div>
+      <div class="plan-price">Sob<span>Consulta</span></div>
       <div class="plan-sub">Até 200 unidades</div>
       <div class="plan-divider"></div>
       <ul class="plan-features">
